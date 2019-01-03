@@ -1,7 +1,3 @@
-
-<head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-
 <body><h2>0. Spring Boot ? (5분)</h2>
 <ol start='' >
 <li>Web으로 제공</li>
@@ -92,7 +88,7 @@
 <li><p>코드 생성하기</p>
 <ul>
 <li><p>Controller - BookController.java</p>
-<pre><code>package com.javasampleapproach.spring.postgresql.controller;
+<pre><code class='language-java' lang='java'>package com.javasampleapproach.spring.postgresql.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -190,7 +186,7 @@ public class BookController {
 </code></pre>
 </li>
 <li><p>Model - Book.java</p>
-<pre><code>package com.javasampleapproach.spring.postgresql.model;
+<pre><code class='language-java' lang='java'>package com.javasampleapproach.spring.postgresql.model;
 
 import java.io.Serializable;
 
@@ -273,7 +269,7 @@ public class Book implements Serializable {
 </code></pre>
 </li>
 <li><p>Repository - BookRepository.java</p>
-<pre><code>package com.javasampleapproach.spring.postgresql.repo;
+<pre><code class='language-java' lang='java'>package com.javasampleapproach.spring.postgresql.repo;
 
 import org.springframework.data.repository.CrudRepository;
 
@@ -286,7 +282,7 @@ public interface BookRepository extends CrudRepository&lt;Book, Long&gt; {
 </code></pre>
 </li>
 <li><p>Properties - application.properties</p>
-<pre><code>spring.datasource.url=jdbc:postgresql://localhost/testdb
+<pre><code class='language-properties' lang='properties'>spring.datasource.url=jdbc:postgresql://localhost/testdb
 spring.datasource.username=postgres
 spring.datasource.password=123
 spring.jpa.generate-ddl=true
@@ -349,6 +345,7 @@ public class FrontController {
 }
 
 </code></pre>
+<p>&nbsp;</p>
 </li>
 <li><p>Model - Book.java</p>
 <pre><code>package com.javasampleapproach.spring.frontend.model;
@@ -411,7 +408,7 @@ public class Book implements Serializable {
 </code></pre>
 </li>
 <li><p>Main - Application.java</p>
-<pre><code>package com.javasampleapproach.spring.frontend;
+<pre><code class='language-java' lang='java'>package com.javasampleapproach.spring.frontend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -442,7 +439,7 @@ public class FrontendApplication {
 </code></pre>
 </li>
 <li><p>Properties - application.properties</p>
-<pre><code>target.service.name=spring-boot-1
+<pre><code class='language-properties' lang='properties'>target.service.name=spring-boot-1
 </code></pre>
 </li>
 
@@ -470,7 +467,7 @@ public class FrontendApplication {
 <li><p><code>compile</code> : 컴파일 수행.</p>
 </li>
 <li><p><code>package</code> : 컴파일 결과를 패키징. pom 에 명시한 옵션에 따라 수행. ㅇㅇㅇ-0.0.1-SNAPSHOT.jar 로 생성 됨. 아래 내용 참조 함.</p>
-<pre><code>&lt;groupId&gt;com.javasampleapproach&lt;/groupId&gt;
+<pre><code class='language-xml' lang='xml'>&lt;groupId&gt;com.javasampleapproach&lt;/groupId&gt;
 &lt;artifactId&gt;spring-boot-postgresql&lt;/artifactId&gt;
 &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
 &lt;packaging&gt;jar&lt;/packaging&gt;
@@ -517,5 +514,102 @@ public class FrontendApplication {
 
 </ol>
 <p>&nbsp;</p>
+<h2>6. 참고</h2>
+<ol>
+<li><p>Java 8 New Feature </p>
+<ol>
+<li><p> Lamda</p>
+<pre><code class='language-java' lang='java'>List&lt;Path&gt; filesInFolder = Files.walk(directoryPath)
+										.filter(Files::isRegularFile)
+										.filter(f -&gt; f.toString().endsWith(POST_FIX))
+										.sorted()
+										.limit(readCount)
+										.collect(Collectors.toList());
+...
+...
+Files.walk(directoryPath)
+				.filter(f -&gt; f.toString().endsWith(POST_FIX))
+				.filter(f -&gt; f.toString().indexOf(msg.getHeader().getTranId()) &gt;= 0)
+				.limit(1)
+				.forEach(p -&gt; {
+					try {
+						Files.delete(p);
+					} catch (IOException e) {
+						logger.warn(&quot;처리 완료된 저장정보를 삭제중에 오류가 발생했습니다. :&quot;, e);
+					}
+				});
+</code></pre>
+<p>&nbsp;</p>
+</li>
+<li><p>Stream</p>
+<ul>
+<li>대용량 데이터 처리 방식에 새로운 접근 형태</li>
+
+</ul>
+<pre><code class='language-java' lang='java'>String[] arr = new String[]{&quot;넷&quot;, &quot;둘&quot;, &quot;셋&quot;, &quot;하나&quot;};
+ 
+// 배열에서 스트림 생성
+Stream&lt;String&gt; stream1 = Arrays.stream(arr);
+stream1.forEach(e -&gt; System.out.print(e + &quot; &quot;));
+System.out.println();
+ 
+// 배열의 특정 부분만을 이용한 스트림 생성
+Stream&lt;String&gt; stream2 = Arrays.stream(arr, 1, 3);
+stream2.forEach(e -&gt; System.out.print(e + &quot; &quot;));
+</code></pre>
+<p>&nbsp;</p>
+</li>
+<li><p>Optional</p>
+<ul>
+<li>NPE(NullPointerException) 개선하기 위한 새로운 방법</li>
+
+</ul>
+<pre><code>http://multifrontgarden.tistory.com/131
+</code></pre>
+<p>&nbsp;</p>
+</li>
+
+</ol>
+</li>
+<li><p>Scala</p>
+<ol>
+<li><p>basic sample</p>
+<pre><code class='language-scala' lang='scala'>object HelloWorld {
+  def main(args: Array[String]) {
+    println(&quot;Hello, world!&quot;)
+  }
+}
+</code></pre>
+</li>
+<li><p>compile</p>
+<pre><code>&gt; scalac HelloWorld.scala
+</code></pre>
+</li>
+<li><p>run</p>
+<pre><code>&gt; scala -classpath . HelloWorld
+
+Hello, world!
+</code></pre>
+</li>
+<li><p>Java 와 병행 실행</p>
+<pre><code class='language-java' lang='java'>import java.util.{Date, Locale}
+import java.text.DateFormat
+import java.text.DateFormat._
+
+object FrenchDate {
+  def main(args: Array[String]) {
+    val now = new Date
+    val df = getDateInstance(LONG, Locale.FRANCE)
+    println(df format now)
+  }
+}
+</code></pre>
+<p>&nbsp;</p>
+</li>
+
+</ol>
+<p>&nbsp;</p>
+</li>
+
+</ol>
 </body>
-</html>
