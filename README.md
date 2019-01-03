@@ -1,8 +1,7 @@
-<!doctype html>
-<html>
+
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>20190103 - Spring Boot Simple Course</title></head>
+
 <body><h2>0. Spring Boot ? (5분)</h2>
 <ol start='' >
 <li>Web으로 제공</li>
