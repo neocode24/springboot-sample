@@ -19,7 +19,7 @@ https://spring.io/tools
 
 1. Spring Starter Project 실행
 
-   ![image-20190103105253638](../../%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A5/20190103/assets/image-20190103105253638.png)
+   ![image-20190103105253638](assets/image-20190103105253638.png)
 
 2. Project 초기 설정
 
@@ -56,7 +56,7 @@ https://spring.io/tools
        http://heowc.tistory.com/4
        ```
 
-     ![image-20190103110952674](../../%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A5/20190103/assets/image-20190103110952674.png)
+     ![image-20190103110952674](assets/image-20190103110952674.png)
 
 ## 3. Project 기능 개발 하기 (20분 ~ 30분)
 
@@ -80,7 +80,7 @@ https://spring.io/tools
 
    - ***Application.java : Start Class
 
-   ![image-20190103112203419](../../%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A5/20190103/assets/image-20190103112203419.png)
+   ![image-20190103112203419](assets/image-20190103112203419.png)
 
 2. 코드 생성하기
 
@@ -495,7 +495,7 @@ https://spring.io/tools
    - `Debug As` 실행 시에는 Break point 설정으로 문제 원인 해결에 사용
    - STS 에서 제공하는 다양한 Runtime 옵션등 사용
 
-   ![image-20190103140045983](../../%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A5/20190103/assets/image-20190103140045983.png)
+   ![image-20190103140045983](assets/image-20190103140045983.png)
 
 2. Console 실행
 
@@ -507,7 +507,7 @@ https://spring.io/tools
 
      예) 원격 서비스명을 IP가 아닌 변수 처리 하여, kubenetes 서비스 명으로 대치.
 
-     ![image-20190103140437770](../../%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A5%E1%86%BC%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A5/20190103/assets/image-20190103140437770.png)
+     ![image-20190103140437770](assets/image-20190103140437770.png)
 
 
 
